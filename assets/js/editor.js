@@ -52,6 +52,8 @@
   const api = async (path, opts = {}) => {
     const res = await fetch(API + path, {
       ...opts,
+      cache: 'no-store', // GitHub API sends max-age=60; consecutive saves must see fresh content
+
       headers: {
         Accept: 'application/vnd.github+json',
         'X-GitHub-Api-Version': '2022-11-28',
