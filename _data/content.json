@@ -4,35 +4,19 @@
     "description": "Maya Razon — executive leadership development and learning experience design. Founding member of The Google School for Leaders."
   },
   "hero": {
-    "kicker": "EXECUTIVE LEADERSHIP DEVELOPMENT · LEARNING EXPERIENCE DESIGN",
+    "kicker": "Executive leadership development · Learning experience design",
     "titleHtml": "Maya <em>Razon</em>",
     "tagline": "I design the programs — and the places — where leaders learn.",
     "sub": "Twenty years in leadership development, the last ten as a founding member of The Google School for Leaders."
   },
   "stats": [
-    {
-      "n": "10,000",
-      "suffix": "+",
-      "label": "LEADERS REACHED"
-    },
-    {
-      "n": "20",
-      "suffix": "+",
-      "label": "YEARS IN THE FIELD"
-    },
-    {
-      "n": "15",
-      "suffix": "+",
-      "label": "ORGANIZATIONS ADVISED"
-    },
-    {
-      "n": "4",
-      "suffix": "",
-      "label": "DESIGN AWARDS"
-    }
+    { "n": "10,000", "suffix": "+", "label": "Leaders reached" },
+    { "n": "20", "suffix": "+", "label": "Years in the field" },
+    { "n": "15", "suffix": "+", "label": "Organizations advised" },
+    { "n": "4", "suffix": "", "label": "Design awards" }
   ],
   "about": {
-    "kicker": "ABOUT",
+    "kicker": "About",
     "headingHtml": "A leadership educator who takes the <em>room</em> as seriously as the curriculum.",
     "p1": "I helped found The Google School for Leaders, Google's global executive development function, where I've built programs, partnerships, and learning environments that have reached more than 10,000 leaders worldwide. I led the space and experience strategy for The Schoolhouse, Google's first purpose-built learning campus, and took Google's management development public for the first time through a course now available in Grow with Google.",
     "p2": "Before Google, I spent several years running my own consultancy, advising leaders at companies from Airbnb to Genentech — and before that, leading HR and Stores Learning & Development at Jamba Juice. I trained as a social worker and a cultural anthropologist, which still shapes how I think about people, culture, and change.",
@@ -42,7 +26,7 @@
     ]
   },
   "work": {
-    "kicker": "WORK",
+    "kicker": "Work",
     "cards": [
       {
         "num": "1",
@@ -68,47 +52,47 @@
     ]
   },
   "experience": {
-    "kicker": "EXPERIENCE",
+    "kicker": "Experience",
     "heading": "Twenty years, four chapters.",
     "roles": [
       {
         "years": "2020 — Present",
         "role": "Product Lead, Leadership Development",
-        "org": "THE GOOGLE SCHOOL FOR LEADERS",
+        "org": "The Google School for Leaders",
         "desc": "Founding member of GSL, Google's reimagined global executive development function — building the strategy, programs, learning environments, and social-impact infrastructure behind an institution reaching 10,000+ leaders."
       },
       {
         "years": "2019 — 2020",
         "role": "L&D Innovation Lead",
-        "org": "GOOGLE",
+        "org": "Google",
         "desc": "Led learning innovation strategy across People Development — turning research in neuroaesthetics, behavioral science, and environmental psychology into practical program and space design."
       },
       {
         "years": "2016 — 2019",
         "role": "Executive Development",
-        "org": "GOOGLE",
+        "org": "Google",
         "desc": "Designed and facilitated programs for Google's senior leaders, laying the groundwork for what became The Google School for Leaders."
       },
       {
         "years": "2009 — 2016",
         "role": "Principal",
-        "org": "MAYA RAZON CONSULTING",
+        "org": "Maya Razon Consulting",
         "desc": "Boutique organizational development consultancy. Advised C-suite and CHRO leaders on executive development, change, talent, and culture across 15+ Fortune 500 organizations."
       },
       {
         "years": "2006 — 2009",
         "role": "Senior Director of HR",
-        "org": "JAMBA JUICE",
+        "org": "Jamba Juice",
         "desc": "Senior people leader across talent and organizational effectiveness; previously Director of Stores Learning & Development."
       },
       {
         "years": "2003 — 2006",
         "role": "Learning & Development",
-        "org": "GAP INC.",
+        "org": "Gap Inc.",
         "desc": "Senior Manager of Training for Gap Outlet; earlier, performance consultant and instructional designer."
       }
     ],
-    "clientsLabel": "CONSULTING CLIENTS, 2009–2016",
+    "clientsLabel": "Consulting clients, 2009–2016",
     "clients": [
       "Airbnb",
       "Blue Shield of California",
@@ -127,22 +111,22 @@
     ]
   },
   "ideas": {
-    "kicker": "IDEAS",
+    "kicker": "Ideas",
     "items": [
       {
-        "label": "GOOGLE RE:WORK — BYLINE",
+        "label": "Google re:Work — Byline",
         "title": "Space matters: How Google is using science to enhance learning outcomes",
         "desc": "How The Schoolhouse team applied research on the brain and the senses to the design of learning spaces.",
         "href": "https://rework.withgoogle.com/intl/en/guides/space-matters-how-google-is-using-science-to-enhance-learning-outcomes"
       },
       {
-        "label": "GROW WITH GOOGLE — COURSE",
+        "label": "Grow with Google — Course",
         "title": "People Management Essentials",
         "desc": "Google's first external flagship management development program — now open to any people manager, anywhere.",
         "href": "https://grow.google/enroll-certificates/people-management-essentials-mid"
       },
       {
-        "label": "CASE STUDY — 2021",
+        "label": "Case study — 2021",
         "title": "The Schoolhouse: a prototype for learning and leading",
         "desc": "The full story of Google's award-winning learning campus — also cited in a New York Times–bestselling book on neuroaesthetics.",
         "href": "uploads/GSL_TheSchoolhouse.pdf"
@@ -150,7 +134,7 @@
     ]
   },
   "footer": {
-    "kicker": "GET IN TOUCH!",
+    "kicker": "Get in touch",
     "ctaHtml": "Say hello on <em>LinkedIn</em>",
     "linkedin": "https://www.linkedin.com/in/mayarazon/"
   }
