@@ -23,8 +23,9 @@ The site has a built-in inline editor that commits straight to this repo.
 
 1. Visit [mayarazon.com/#edit](https://mayarazon.com/#edit) (or press
    **Cmd/Ctrl + Shift + E** on any page).
-2. Paste a GitHub token (see below) the first time. It is checked for push
-   access to this repo and kept in that browser's localStorage.
+2. Click **Sign in with GitHub** and approve in the popup (first time
+   only per browser). The resulting token is checked for push access to
+   this repo and kept in that browser's localStorage.
 3. Click **✎ Edit page** — every editable text gets a dashed outline. Click
    and type.
 4. Click **Save → commit**. The editor writes your changes into
@@ -32,19 +33,25 @@ The site has a built-in inline editor that commits straight to this repo.
    updates about a minute later.
 
 Authorization is enforced by GitHub, not the page: a commit only succeeds
-if the token's owner has push access to `sschafft/mayarazon`. Visitors
-without one can type in the boxes all day — nothing can be saved.
+if the signed-in account has push access to `sschafft/mayarazon`. Visitors
+without it can type in the boxes all day — nothing can be saved.
 
-### Creating a token
+### How sign-in works
 
-GitHub → Settings → Developer settings → **Fine-grained personal access
-tokens** → Generate new token:
+GitHub's OAuth token exchange can't be done from a static page (no CORS),
+so a ~40-line proxy in [`oauth-proxy/`](oauth-proxy/) is deployed at
+`https://mayarazon-oauth.vercel.app` (Vercel project `mayarazon-oauth`).
+It holds the OAuth App's client secret, exchanges the login code for a
+token, and posts the token back to the page — nothing else. The site
+itself is served entirely by GitHub Pages.
 
-- **Repository access:** Only select repositories → `sschafft/mayarazon`
-- **Permissions:** Contents → **Read and write** (nothing else)
-- Set an expiry you're comfortable with.
+The OAuth App requests the `public_repo` scope (write to the account's
+public repos) — that's GitHub's narrowest OAuth-app scope that can commit
+here. **Use a token** in the sign-in bar is the fallback: a fine-grained
+PAT (Repository access → this repo only; Permissions → Contents: Read &
+write) is tighter-scoped if you ever care.
 
-Use **Sign out** in the editor bar to remove the token from a browser.
+Use **Sign out** in the editor bar to remove the credential from a browser.
 
 ### What the editor can't edit
 

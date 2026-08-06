@@ -18,6 +18,11 @@
   const DATA_PATH = '_data/content.json';
   const LS_TOKEN = 'mr_gh_token';
   const API = 'https://api.github.com';
+  // OAuth proxy (oauth-proxy/ in this repo, deployed on Vercel). GitHub's
+  // token-exchange endpoint has no CORS, so a static site cannot complete
+  // the OAuth flow alone — this tiny function does the exchange and posts
+  // the token back to this page.
+  const OAUTH_PROXY = 'https://mayarazon-oauth.vercel.app';
 
   const state = {
     token: null,
@@ -157,17 +162,53 @@
 
   const renderSignIn = (msg) => {
     render(`
-      <span class="mre-status">${msg || 'Paste a GitHub token to edit this site'}</span>
+      <span class="mre-status">${msg || 'Sign in to edit this site'}</span>
+      <button class="mre-gh">Sign in with GitHub</button>
+      <button class="mre-ghost mre-token-toggle">Use a token</button>
+      <button class="mre-ghost mre-close">Close</button>
+    `);
+    $('.mre-gh', bar).onclick = signInWithGitHub;
+    $('.mre-token-toggle', bar).onclick = () => renderTokenSignIn();
+    $('.mre-close', bar).onclick = teardown;
+  };
+
+  const renderTokenSignIn = (msg) => {
+    render(`
+      <span class="mre-status">${msg || 'Paste a GitHub token (repo-scoped)'}</span>
       <input type="password" class="mre-token" placeholder="github_pat_… or ghp_…" autocomplete="off">
       <button class="mre-signin">Sign in</button>
-      <button class="mre-ghost mre-close">Close</button>
+      <button class="mre-ghost mre-back">Back</button>
     `);
     $('.mre-signin', bar).onclick = () => auth($('.mre-token', bar).value.trim());
     $('.mre-token', bar).onkeydown = (e) => {
       if (e.key === 'Enter') auth($('.mre-token', bar).value.trim());
     };
-    $('.mre-close', bar).onclick = teardown;
+    $('.mre-back', bar).onclick = () => renderSignIn();
   };
+
+  const signInWithGitHub = () => {
+    const state = crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2);
+    try { sessionStorage.setItem('mre_oauth_state', state); } catch (e) {}
+    status('Waiting for GitHub — check the popup…');
+    const w = window.open(
+      OAUTH_PROXY + '/api/auth?state=' + encodeURIComponent(state),
+      'mre-oauth',
+      'width=640,height=760'
+    );
+    if (!w) renderSignIn('Popup blocked — allow popups for this site and retry');
+  };
+
+  window.addEventListener('message', (e) => {
+    if (e.origin !== OAUTH_PROXY) return;
+    const d = e.data;
+    if (!d || d.source !== 'mr-oauth') return;
+    let expect = null;
+    try { expect = sessionStorage.getItem('mre_oauth_state'); } catch (err) {}
+    if (!expect || d.state !== expect) { renderSignIn('Sign-in state mismatch — try again'); return; }
+    try { sessionStorage.removeItem('mre_oauth_state'); } catch (err) {}
+    if (d.error) { renderSignIn('GitHub sign-in failed: ' + d.error); return; }
+    auth(d.token);
+  });
 
   const renderIdle = () => {
     render(`

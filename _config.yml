@@ -4,3 +4,4 @@ exclude:
   - README.md
   - LICENSE
   - vendor
+  - oauth-proxy
