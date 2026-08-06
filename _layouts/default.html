@@ -21,7 +21,8 @@
     if (window.__mrEditorLoaded) return;
     window.__mrEditorLoaded = true;
     var s = document.createElement('script');
-    s.src = 'assets/js/editor.js';
+    // Cache-buster changes every build so a deploy can never run a stale editor.
+    s.src = 'assets/js/editor.js?v={{ site.time | date: "%s" }}';
     document.head.appendChild(s);
   }
   var hasSession = false;

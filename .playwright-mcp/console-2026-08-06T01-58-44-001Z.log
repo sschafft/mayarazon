@@ -1,0 +1,3 @@
+[     462ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://mayarazon.com/#edit:0
+[   81597ms] [ERROR] Access to fetch at 'http://127.0.0.1:8763/' from origin 'http://mayarazon.com' has been blocked by CORS policy: The request client is not a secure context and the resource is in more-private address space `loopback`. @ http://mayarazon.com/#edit:0
+[   81599ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://127.0.0.1:8763/:0

@@ -1,0 +1,153 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "Maya Razon" [ref=e5] [cursor=pointer]:
+          - /url: "#top"
+        - generic [ref=e6]:
+          - link "About" [ref=e7] [cursor=pointer]:
+            - /url: "#about"
+          - link "Work" [ref=e8] [cursor=pointer]:
+            - /url: "#work"
+          - link "Experience" [ref=e9] [cursor=pointer]:
+            - /url: "#experience"
+          - link "Ideas" [ref=e10] [cursor=pointer]:
+            - /url: "#ideas"
+          - link "LinkedIn ↗" [ref=e11] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/mayarazon/
+    - banner [ref=e12]:
+      - paragraph [ref=e13]: Executive leadership development · Learning experience design
+      - heading [level=1] [ref=e14]:
+        - text: Maya
+        - emphasis [ref=e15]: Razon
+      - img "Maya Razon" [ref=e18]
+      - paragraph [ref=e19]: I design the programs — and the places — where leaders learn.
+      - paragraph [ref=e20]: Twenty years in leadership development, the last ten as a founding member of The Google School for Leaders.
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]: 10,000+
+        - generic [ref=e25]: Leaders reached
+      - generic [ref=e26]:
+        - generic [ref=e27]: 20+
+        - generic [ref=e28]: Years in the field
+      - generic [ref=e29]:
+        - generic [ref=e30]: 15+
+        - generic [ref=e31]: Organizations advised
+      - generic [ref=e32]:
+        - generic [ref=e33]: "4"
+        - generic [ref=e34]: Design awards
+    - generic [ref=e35]:
+      - paragraph [ref=e36]: About
+      - heading [level=2] [ref=e37]:
+        - text: A leadership educator who takes the
+        - emphasis [ref=e38]: room
+        - text: as seriously as the curriculum.
+      - paragraph [ref=e39]: I helped found The Google School for Leaders, Google's global executive development function, where I've built programs, partnerships, and learning environments that have reached more than 10,000 leaders worldwide. I led the space and experience strategy for The Schoolhouse, Google's first purpose-built learning campus, and took Google's management development public for the first time through a course now available in Grow with Google.
+      - paragraph [ref=e40]: Before Google, I spent several years running my own consultancy, advising leaders at companies from Airbnb to Genentech — and before that, leading HR and Stores Learning & Development at Jamba Juice. I trained as a social worker and a cultural anthropologist, which still shapes how I think about people, culture, and change.
+      - generic [ref=e41]:
+        - generic [ref=e42]: MSW, Boston University
+        - generic [ref=e43]: BA Anthropology, UCLA — magna cum laude
+    - generic [ref=e45]:
+      - paragraph [ref=e46]: Work
+      - generic [ref=e47]:
+        - article [ref=e48]:
+          - generic [ref=e49]: "1"
+          - heading "Executive development" [level=3] [ref=e50]
+          - paragraph [ref=e51]: Designing and facilitating development experiences for the most senior leaders at Google and beyond — translating complex leadership frameworks into programs people actually use, from flagship curricula to bespoke interventions.
+        - article [ref=e52]:
+          - generic [ref=e53]: "2"
+          - heading "Learning environments" [level=3] [ref=e54]
+          - paragraph [ref=e55]: I led space and experience strategy for The Schoolhouse — Google's first purpose-built learning campus — applying neuroaesthetics research to how a learning space looks, feels, sounds, and even smells.
+          - img "The Schoolhouse learning campus" [ref=e56]
+          - paragraph [ref=e57]: Opened 2019 · 9,000 sq ft · four design awards
+        - article [ref=e58]:
+          - generic [ref=e59]: "3"
+          - heading "Learning at scale" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Built People Development's first social-impact initiative, extending the School's expertise to social innovators worldwide — and launched Google's first external management development program, from concept to market.
+    - generic [ref=e63]:
+      - paragraph [ref=e64]: Experience
+      - heading "Twenty years, four chapters." [level=2] [ref=e65]
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: 2020 — Present
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - heading "Product Lead, Leadership Development" [level=3] [ref=e71]
+              - generic [ref=e72]: The Google School for Leaders
+            - paragraph [ref=e73]: Founding member of GSL, Google's reimagined global executive development function — building the strategy, programs, learning environments, and social-impact infrastructure behind an institution reaching 10,000+ leaders.
+        - generic [ref=e74]:
+          - generic [ref=e75]: 2019 — 2020
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - heading "L&D Innovation Lead" [level=3] [ref=e78]
+              - generic [ref=e79]: Google
+            - paragraph [ref=e80]: Led learning innovation strategy across People Development — turning research in neuroaesthetics, behavioral science, and environmental psychology into practical program and space design.
+        - generic [ref=e81]:
+          - generic [ref=e82]: 2016 — 2019
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - heading "Executive Development" [level=3] [ref=e85]
+              - generic [ref=e86]: Google
+            - paragraph [ref=e87]: Designed and facilitated programs for Google's senior leaders, laying the groundwork for what became The Google School for Leaders.
+        - generic [ref=e88]:
+          - generic [ref=e89]: 2009 — 2016
+          - generic [ref=e90]:
+            - generic [ref=e91]:
+              - heading "Principal" [level=3] [ref=e92]
+              - generic [ref=e93]: Maya Razon Consulting
+            - paragraph [ref=e94]: Boutique organizational development consultancy. Advised C-suite and CHRO leaders on executive development, change, talent, and culture across 15+ Fortune 500 organizations.
+        - generic [ref=e95]:
+          - generic [ref=e96]: 2006 — 2009
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - heading "Senior Director of HR" [level=3] [ref=e99]
+              - generic [ref=e100]: Jamba Juice
+            - paragraph [ref=e101]: Senior people leader across talent and organizational effectiveness; previously Director of Stores Learning & Development.
+        - generic [ref=e102]:
+          - generic [ref=e103]: 2003 — 2006
+          - generic [ref=e104]:
+            - generic [ref=e105]:
+              - heading "Learning & Development" [level=3] [ref=e106]
+              - generic [ref=e107]: Gap Inc.
+            - paragraph [ref=e108]: Senior Manager of Training for Gap Outlet; earlier, performance consultant and instructional designer.
+      - generic [ref=e109]:
+        - paragraph [ref=e110]: Consulting clients, 2009–2016
+        - paragraph [ref=e111]: Airbnb · Blue Shield of California · Deloitte · Dolby · Electronic Arts · Gap Inc. · Genentech · Levi Strauss & Co. · Old Navy · Safeway · Shutterfly · Sur La Table · United Healthcare · Williams-Sonoma
+    - generic [ref=e113]:
+      - paragraph [ref=e114]: Ideas
+      - generic [ref=e115]:
+        - 'link "Google re:Work — Byline Space matters: How Google is using science to enhance learning outcomes How The Schoolhouse team applied research on the brain and the senses to the design of learning spaces. ↗" [ref=e116] [cursor=pointer]':
+          - /url: https://rework.withgoogle.com/intl/en/guides/space-matters-how-google-is-using-science-to-enhance-learning-outcomes
+          - generic [ref=e117]:
+            - paragraph [ref=e118]: Google re:Work — Byline
+            - 'heading "Space matters: How Google is using science to enhance learning outcomes" [level=3] [ref=e119]'
+            - paragraph [ref=e120]: How The Schoolhouse team applied research on the brain and the senses to the design of learning spaces.
+          - generic [ref=e121]: ↗
+        - link "Grow with Google — Course People Management Essentials Google's first external flagship management development program — now open to any people manager, anywhere. ↗" [ref=e122] [cursor=pointer]:
+          - /url: https://grow.google/enroll-certificates/people-management-essentials-mid
+          - generic [ref=e123]:
+            - paragraph [ref=e124]: Grow with Google — Course
+            - heading "People Management Essentials" [level=3] [ref=e125]
+            - paragraph [ref=e126]: Google's first external flagship management development program — now open to any people manager, anywhere.
+          - generic [ref=e127]: ↗
+        - 'link "Case study — 2021 The Schoolhouse: a prototype for learning and leading The full story of Google''s award-winning learning campus — also cited in a New York Times–bestselling book on neuroaesthetics. ↗" [ref=e128] [cursor=pointer]':
+          - /url: uploads/GSL_TheSchoolhouse.pdf
+          - generic [ref=e129]:
+            - paragraph [ref=e130]: Case study — 2021
+            - 'heading "The Schoolhouse: a prototype for learning and leading" [level=3] [ref=e131]'
+            - paragraph [ref=e132]: The full story of Google's award-winning learning campus — also cited in a New York Times–bestselling book on neuroaesthetics.
+          - generic [ref=e133]: ↗
+    - contentinfo [ref=e134]:
+      - paragraph [ref=e135]: Get in touch!
+      - link [ref=e136] [cursor=pointer]:
+        - /url: https://www.linkedin.com/in/mayarazon/
+        - generic [ref=e137]:
+          - text: Say hello on
+          - emphasis [ref=e138]: LinkedIn
+        - text: ↗
+      - paragraph [ref=e139]: © 2026 Maya Razon
+  - generic [ref=e140]:
+    - generic [ref=e148]: Committed df3464e — live in ~1 min
+    - button "✎ Edit page" [ref=e149] [cursor=pointer]
+    - button "Sign out" [ref=e150] [cursor=pointer]
+    - button "Close" [ref=e151] [cursor=pointer]
