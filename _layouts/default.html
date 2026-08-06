@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ site.data.content.meta.title }}</title>
+  <meta name="description" content="{{ site.data.content.meta.description }}">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+{{ content }}
+<script>
+// Lazy editor loader: only loads the editor when summoned (#edit in the URL,
+// Cmd/Ctrl+Shift+E, or a previously saved session). Public visitors never load it.
+(function () {
+  function load() {
+    if (window.__mrEditorLoaded) return;
+    window.__mrEditorLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'assets/js/editor.js';
+    document.head.appendChild(s);
+  }
+  var hasSession = false;
+  try { hasSession = !!localStorage.getItem('mr_gh_token'); } catch (e) {}
+  if (location.hash === '#edit' || hasSession) load();
+  addEventListener('hashchange', function () { if (location.hash === '#edit') load(); });
+  addEventListener('keydown', function (e) {
+    if ((e.metaKey || e.ctrlKey) && e.shiftKey && e.code === 'KeyE') { e.preventDefault(); load(); }
+  });
+})();
+</script>
+</body>
+</html>

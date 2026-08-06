@@ -1,0 +1,6 @@
+title: Maya Razon
+url: "https://mayarazon.com"
+exclude:
+  - README.md
+  - LICENSE
+  - vendor

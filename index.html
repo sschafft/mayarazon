@@ -1,59 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello, World!</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #fdfdfb;
-      --fg: #1a1a1a;
-      --muted: #6b6b6b;
-      --accent: #3b5bdb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #14161a;
-        --fg: #f2f2f0;
-        --muted: #9a9a96;
-        --accent: #8ea3ff;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 2rem;
-      background: var(--bg);
-      color: var(--fg);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-    main { text-align: center; max-width: 32rem; }
-    h1 {
-      margin: 0 0 0.5rem;
-      font-size: clamp(2.5rem, 8vw, 4rem);
-      font-weight: 700;
-      letter-spacing: -0.03em;
-    }
-    p { margin: 0; color: var(--muted); font-size: 1.05rem; line-height: 1.6; }
-    a { color: var(--accent); }
-    footer {
-      position: fixed;
-      bottom: 1.25rem;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>Hello, World! 👋</h1>
-    <p>This site is live on GitHub Pages.</p>
-  </main>
-  <footer>mayarazon</footer>
-</body>
-</html>
+---
+layout: default
+---
+{% assign c = site.data.content %}
+<div class="page" id="top">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">Maya Razon</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-pill">About</a>
+        <a href="#work" class="nav-pill">Work</a>
+        <a href="#experience" class="nav-pill">Experience</a>
+        <a href="#ideas" class="nav-pill">Ideas</a>
+        <a href="{{ c.footer.linkedin }}" target="_blank" rel="noopener" class="nav-pill nav-pill--accent">LinkedIn&nbsp;&#8599;</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker" data-edit="hero.kicker">{{ c.hero.kicker }}</p>
+    <h1 class="hero-title" data-edit-html="hero.titleHtml">{{ c.hero.titleHtml }}</h1>
+    <div class="hero-photo">
+      <div class="hero-photo-band"></div>
+      <img src="assets/maya-razon.jpg" alt="Maya Razon">
+    </div>
+    <p class="hero-tagline" data-edit="hero.tagline">{{ c.hero.tagline }}</p>
+    <p class="hero-sub" data-edit="hero.sub">{{ c.hero.sub }}</p>
+  </header>
+
+  <div class="stats">
+    <div class="stats-inner">
+      {% for s in c.stats %}
+      <div class="stat">
+        <div class="stat-n"><span data-edit="stats.{{ forloop.index0 }}.n">{{ s.n }}</span><span class="stat-suffix" data-edit="stats.{{ forloop.index0 }}.suffix">{{ s.suffix }}</span></div>
+        <div class="stat-label" data-edit="stats.{{ forloop.index0 }}.label">{{ s.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <section id="about" class="about">
+    <p class="kicker" data-edit="about.kicker">{{ c.about.kicker }}</p>
+    <h2 class="section-title about-title" data-edit-html="about.headingHtml">{{ c.about.headingHtml }}</h2>
+    <p class="about-p" data-edit="about.p1">{{ c.about.p1 }}</p>
+    <p class="about-p" data-edit="about.p2">{{ c.about.p2 }}</p>
+    <div class="badges">
+      {% for b in c.about.badges %}
+      <span class="badge" data-edit="about.badges.{{ forloop.index0 }}">{{ b }}</span>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="work" class="work">
+    <div class="work-inner">
+      <p class="kicker kicker--center" data-edit="work.kicker">{{ c.work.kicker }}</p>
+      <div class="work-grid">
+        {% for w in c.work.cards %}
+        <article class="card">
+          <div class="card-dot">{{ w.num }}</div>
+          <h3 class="card-title" data-edit="work.cards.{{ forloop.index0 }}.title">{{ w.title }}</h3>
+          <p class="card-body" data-edit="work.cards.{{ forloop.index0 }}.body">{{ w.body }}</p>
+          {% if w.photo %}
+          <img class="card-photo" src="assets/schoolhouse.jpg" alt="The Schoolhouse learning campus">
+          {% endif %}
+          {% if w.note != "" %}
+          <p class="card-note" data-edit="work.cards.{{ forloop.index0 }}.note">{{ w.note }}</p>
+          {% endif %}
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="experience">
+    <div class="experience-inner">
+      <p class="kicker kicker--center kicker--deep" data-edit="experience.kicker">{{ c.experience.kicker }}</p>
+      <h2 class="section-title section-title--center" data-edit="experience.heading">{{ c.experience.heading }}</h2>
+      <div class="roles">
+        {% for r in c.experience.roles %}
+        <div class="role">
+          <div class="role-years" data-edit="experience.roles.{{ forloop.index0 }}.years">{{ r.years }}</div>
+          <div class="role-main">
+            <div class="role-head">
+              <h3 class="role-title" data-edit="experience.roles.{{ forloop.index0 }}.role">{{ r.role }}</h3>
+              <span class="role-org" data-edit="experience.roles.{{ forloop.index0 }}.org">{{ r.org }}</span>
+            </div>
+            <p class="role-desc" data-edit="experience.roles.{{ forloop.index0 }}.desc">{{ r.desc }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="clients">
+        <p class="clients-label" data-edit="experience.clientsLabel">{{ c.experience.clientsLabel }}</p>
+        <p class="clients-list" data-edit-list="experience.clients">{% for cl in c.experience.clients %}{{ cl }}{% unless forloop.last %} <span class="sep">&middot;</span> {% endunless %}{% endfor %}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="ideas">
+    <div class="ideas-inner">
+      <p class="kicker kicker--center" data-edit="ideas.kicker">{{ c.ideas.kicker }}</p>
+      <div class="ideas-list">
+        {% for i in c.ideas.items %}
+        <a href="{{ i.href }}" target="_blank" rel="noopener" class="idea">
+          <div class="idea-text">
+            <p class="idea-label" data-edit="ideas.items.{{ forloop.index0 }}.label">{{ i.label }}</p>
+            <h3 class="idea-title" data-edit="ideas.items.{{ forloop.index0 }}.title">{{ i.title }}</h3>
+            <p class="idea-desc" data-edit="ideas.items.{{ forloop.index0 }}.desc">{{ i.desc }}</p>
+          </div>
+          <span class="idea-arrow">&#8599;</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p class="kicker" data-edit="footer.kicker">{{ c.footer.kicker }}</p>
+    <a href="{{ c.footer.linkedin }}" target="_blank" rel="noopener" class="footer-cta"><span data-edit-html="footer.ctaHtml">{{ c.footer.ctaHtml }}</span>&nbsp;&#8599;</a>
+    <p class="footer-copy">&copy; {{ 'now' | date: "%Y" }} Maya Razon</p>
+  </footer>
+
+</div>
