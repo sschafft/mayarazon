@@ -10,10 +10,26 @@
     "sub": "Twenty years in leadership development, the last ten as a founding member of The Google School for Leaders."
   },
   "stats": [
-    { "n": "10,000", "suffix": "+", "label": "Leaders reached" },
-    { "n": "20", "suffix": "+", "label": "Years in the field" },
-    { "n": "15", "suffix": "+", "label": "Organizations advised" },
-    { "n": "4", "suffix": "", "label": "Design awards" }
+    {
+      "n": "10,000",
+      "suffix": "+",
+      "label": "Leaders reached"
+    },
+    {
+      "n": "20",
+      "suffix": "+",
+      "label": "Years in the field"
+    },
+    {
+      "n": "15",
+      "suffix": "+",
+      "label": "Organizations advised"
+    },
+    {
+      "n": "4",
+      "suffix": "",
+      "label": "Design awards"
+    }
   ],
   "about": {
     "kicker": "About",
@@ -134,7 +150,7 @@
     ]
   },
   "footer": {
-    "kicker": "Get in touch",
+    "kicker": "Get in touch!",
     "ctaHtml": "Say hello on <em>LinkedIn</em>",
     "linkedin": "https://www.linkedin.com/in/mayarazon/"
   }
