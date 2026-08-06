@@ -72,8 +72,10 @@
   const readValue = (el) => {
     if (el.hasAttribute('data-edit-html')) return cleanHTML(el);
     if (el.hasAttribute('data-edit-list'))
-      return el.innerText.split('·').map((s) => s.trim()).filter(Boolean);
-    return el.innerText.replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim();
+      return el.textContent.split('·').map((s) => s.trim()).filter(Boolean);
+    // textContent, not innerText: innerText reflects rendered text, so CSS
+    // text-transform:uppercase would get baked into the saved copy.
+    return el.textContent.replace(/\u00A0/g, ' ').replace(/\s+/g, ' ').trim();
   };
   const pathOf = (el) =>
     el.getAttribute('data-edit') || el.getAttribute('data-edit-html') || el.getAttribute('data-edit-list');
